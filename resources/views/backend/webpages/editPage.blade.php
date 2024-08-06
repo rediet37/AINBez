@@ -124,6 +124,13 @@
                                                     <input type="text" name="hero_slide3_text" id="hero_slide3_text" value="{{ old('hero_slide3_text', $webpage->slide3_sub) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Enter text for Hero Section slide 1 ...">
                                                     <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('slide3_sub') }}</div>
                                                 </div>
+
+                                                {{--STOPPED WHILE EDITING THIS--}}
+                                                <label for="download_btn_ref" class="block text-sm font-medium text-gray-700">Download Button Reference Link</label>
+                                                <div class="Smt-1">
+                                                    <input type="url" name="download_btn_ref" id="download_btn_ref" value="{{ old('download_btn_ref', $webpage->download_btn_ref) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Enter text for Hero Section slide 1 ...">
+                                                    <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('download_btn_ref') }}</div>
+                                                </div>
                                             </div>
 
                                             <hr>
