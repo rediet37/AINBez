@@ -41,12 +41,11 @@
                                 <div class="main-slider-content">
                                     <div class="main-slider-content__inner">
                                         <div class="big-title">
-                                            <h2>Welcome to<br> AIN Business Group</h2>
+                                            <h2>{{$webpage->slide1_header}}</h2>
                                         </div>
                                         <div class="text">
                                             <p>
-                                                Repudiandae ducimus dolor natus, nisi ad, ipsa similique<br>
-                                                Repudiandae perferendis deserunt saepe minima.
+                                                {{$webpage->slide1_sub}}
                                             </p>
                                         </div>
                                         <div class="btns-box">
@@ -74,12 +73,11 @@
                                 <div class="main-slider-content">
                                     <div class="main-slider-content__inner">
                                         <div class="big-title">
-                                            <h2>Welcome to<br> AIN Business Group</h2>
+                                            <h2>{{$webpage->slide2_header}}</h2>
                                         </div>
                                         <div class="text">
                                             <p>
-                                                Repudiandae ducimus dolor natus, nisi ad, ipsa similique<br>
-                                                Repudiandae perferendis deserunt saepe minima.
+                                                {{$webpage->slide2_sub}}
                                             </p>
                                         </div>
                                         <div class="btns-box">
@@ -107,12 +105,11 @@
                                 <div class="main-slider-content">
                                     <div class="main-slider-content__inner">
                                         <div class="big-title">
-                                            <h2>Welcome to<br> AIN Business Group</h2>
+                                            <h2>{{$webpage->slide3_header}}</h2>
                                         </div>
                                         <div class="text">
                                             <p>
-                                                Repudiandae ducimus dolor natus, nisi ad, ipsa similique<br>
-                                                Repudiandae perferendis deserunt saepe minima.
+                                                {{$webpage->slide3_sub}}
                                             </p>
                                         </div>
                                         <div class="btns-box">
@@ -150,7 +147,7 @@
     <!--Start Features Style1 Area-->
     <section class="features-style1-area">
         <div class="container">
-            <div class="sec-title text-center">
+            <div class="text-center sec-title">
                 <h2>{{$webpage['industries'][0]}}</h2>
                 <div class="sub-title">
                     <p>Committed to helping our customers succeed.</p>
@@ -222,7 +219,7 @@
                     <div class="service-style1-tab">
                         <!--Start Service Style1 Tab Button-->
                         <div class="service-style1-tab__button">
-                            <ul class="tabs-button-box clearfix">
+                            <ul class="clearfix tabs-button-box">
                                 <!-- <li data-tab="#individuals" class="tab-btn-item">
                                     <div class="inner">
                                         <div class="left">
@@ -379,7 +376,7 @@
 
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="service-style1__btns-box text-center">
+                    <div class="text-center service-style1__btns-box">
                         <a class="btn-one" href="#" style="--ain-theme-color: {{ $webpage->color }}">
                             <span class="txt">View All Services</span>
                         </a>
@@ -394,7 +391,7 @@
     <!--Start Wealth Secure Area-->
     <section class="wealth-secure-area">
         <div class="container">
-            <div class="sec-title text-center">
+            <div class="text-center sec-title">
                 <h2>{{$webpage['services_header'] ?? ''}}</h2>
                 <div class="sub-title">
                     <p>Don’t just make a deposit, make an investment today.</p>
@@ -591,7 +588,7 @@
 
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="faq-style1-bottom-box text-center">
+                    <div class="text-center faq-style1-bottom-box">
                         <p>Didn’t get what you were looking for, Click below button to more anwers or <a href="#">contact us.</a></p>
                         <div class="btns-box">
                             <a class="btn-one" href="#" style="--ain-theme-color: {{ $webpage->color }}">

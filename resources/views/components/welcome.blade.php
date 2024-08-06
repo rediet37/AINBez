@@ -1,16 +1,16 @@
-<div class="p-6 lg:p-8 bg-white border-b border-gray-200">
-    <x-application-logo class="block h-12 w-auto" />
+<div class="p-6 bg-white border-b border-gray-200 lg:p-8">
+    <x-application-logo class="block w-auto h-12" />
 
     <h1 class="mt-8 text-2xl font-medium text-gray-900">
         Welcome to your AIN Employee Dashboard!
     </h1>
 
-    <p class="mt-6 text-gray-500 leading-relaxed">
+    <p class="mt-6 leading-relaxed text-gray-500">
         You can control what happen on your website right from this dashboard.
     </p>
 </div>
 
-<div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
+<div class="grid grid-cols-1 bg-gray-200 bg-opacity-25 md:grid-cols-2">
     
         <div class="p-6">
             <div class="flex items-center">
@@ -42,7 +42,7 @@
                     </g>
                 </svg>
 
-                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('post_webpages.index') }}">Projects</a></div>
+                <div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="{{ route('post_webpages.index') }}">Projects</a></div>
             </div>
 
             <div class="ml-12">
@@ -51,7 +51,7 @@
                 </div>
 
                 <a href="{{ route('post_webpages.index') }}">
-                    <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                    <div class="flex items-center mt-3 text-sm font-semibold text-indigo-700">
                             <div>Explore projects page</div>
 
                             <div class="ml-1 text-indigo-500">
@@ -122,7 +122,7 @@
                 </g>
             </svg>
 
-            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('users.index') }}">Products Management</a></div>
+            <div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="{{ route('users.index') }}">Products Management</a></div>
         </div>
 
         <div class="ml-12">
@@ -131,7 +131,7 @@
             </div>
 
             <a href="https://www.drongopma.com/login/" target="_blank">
-                <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                <div class="flex items-center mt-3 text-sm font-semibold text-indigo-700">
                         <div>Visit Drongo Project Management Assistant</div>
 
                         <div class="ml-1 text-indigo-500">
@@ -195,7 +195,7 @@
                     </g>
                 </svg>
 
-                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('users.index') }}">Employees</a></div>
+                <div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="{{ route('users.index') }}">Employees</a></div>
             </div>
 
             <div class="ml-12">
@@ -204,7 +204,7 @@
                 </div>
 
                 <a href="{{ route('users.index') }}">
-                    <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                    <div class="flex items-center mt-3 text-sm font-semibold text-indigo-700">
                             <div>Go to employee management page</div>
 
                             <div class="ml-1 text-indigo-500">
@@ -214,32 +214,6 @@
                 </a>
             </div>
         </div>
-    
-        {{--WHAT I ADDED START--}}
-        <div class="p-6 border-t border-gray-200">
-            <div class="flex items-center">
-                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('users.index') }}">Hero Section</a></div>
-            </div>
-
-            <div class="ml-12">
-                <div class="mt-2 text-sm text-gray-500">
-                    Edit the content on the hero section of your webpage. You can add, update, and remove images and hero text, as well as setting URL redirects for click actions.
-                </div>
-
-                <a href="{{ route('users.index') }}">
-                    <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                            <div>Go to hero section management page</div>
-
-                            <div class="ml-1 text-indigo-500">
-                                <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                            </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        {{--WHAT I ADDED END--}}
-
     
         <div class="p-6 border-t border-l border-gray-200">
             <div class="flex items-center">
@@ -293,7 +267,7 @@
                     </g>
                 </svg>
 
-                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('users.index') }}">News Articles</a></div>
+                <div class="ml-4 text-lg font-semibold leading-7 text-gray-600"><a href="{{ route('users.index') }}">News Articles</a></div>
             </div>
 
             <div class="ml-12">
@@ -302,7 +276,7 @@
                 </div>
 
                 <a href="{{ route('post_news.index') }}">
-                    <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                    <div class="flex items-center mt-3 text-sm font-semibold text-indigo-700">
                             <div>Go to news articles management page</div>
 
                             <div class="ml-1 text-indigo-500">

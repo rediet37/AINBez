@@ -99,6 +99,18 @@ class WebpageController extends Controller
                 $webpage->update([
                     'color' => $request->color,
                     'color2' => $request->color2,
+
+                    /* WHAT WE ADDED START */
+                    'slide1_header' => $request->hero_slide1_title,
+                    'slide1_sub' => $request->hero_slide1_text,
+                    'slide2_header' => $request->hero_slide2_title,
+                    'slide2_sub' => $request->hero_slide2_text,
+                    'slide3_header' => $request->hero_slide3_title,
+                    'slide3_sub' => $request->hero_slide3_text,
+
+
+                    /* WHAT WE ADDED START */
+
                     'industries' => [
                         $request->ind_section_header,
                         [

@@ -34,8 +34,5 @@ Route::middleware([
     Route::resource('post_news', NewsController::class);
     Route::resource('users', UsersController::class);
     
-    //WHAT I ADDED START
     
-
-    //WHAT I ADDED END
 });
