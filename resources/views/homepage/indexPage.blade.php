@@ -27,8 +27,8 @@
             }}'>
             <div class="swiper-wrapper">
                 <div class="slider-buttom-box">
-                    <a class="style2" href="#" style="--ain-theme-color: {{ $webpage->color }}">Download now <span class="icon-play-button"></span></a>
-                    <a href="#" style="--ain-theme-color: {{ $webpage->color }}">Make an Enquiry <span class="icon-play-button"></span></a>
+                    <a class="style2" href="{{ $webpage->download_btn_ref }}" style="--ain-theme-color: {{ $webpage->color }}">Download now <span class="icon-play-button"></span></a>
+                    <a href="{{ $webpage->enquiry_btn_ref }}" style="--ain-theme-color: {{ $webpage->color }}">Make an Enquiry <span class="icon-play-button"></span></a>
                 </div>
 
                 <!--Start Single Swiper Slide-->
@@ -49,7 +49,7 @@
                                             </p>
                                         </div>
                                         <div class="btns-box">
-                                            <a class="btn-one" href="add-property.html" style="--ain-theme-color: {{ $webpage->color }}">
+                                            <a class="btn-one" href="{{ $webpage->discover_btn_ref }}" style="--ain-theme-color: {{ $webpage->color }}">
                                                 <span class="txt">
                                                     Discover now
                                                 </span>
@@ -81,7 +81,7 @@
                                             </p>
                                         </div>
                                         <div class="btns-box">
-                                            <a class="btn-one" href="add-property.html">
+                                            <a class="btn-one" href="{{ $webpage->discover_btn_ref }}">
                                                 <span class="txt">
                                                     Discover now
                                                 </span>
@@ -113,7 +113,7 @@
                                             </p>
                                         </div>
                                         <div class="btns-box">
-                                            <a class="btn-one" href="add-property.html">
+                                            <a class="btn-one" href="{{ $webpage->discover_btn_ref }}">
                                                 <span class="txt">
                                                     Discover now
                                                 </span>

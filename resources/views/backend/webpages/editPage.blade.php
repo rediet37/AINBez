@@ -125,11 +125,22 @@
                                                     <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('slide3_sub') }}</div>
                                                 </div>
 
-                                                {{--STOPPED WHILE EDITING THIS--}}
                                                 <label for="download_btn_ref" class="block text-sm font-medium text-gray-700">Download Button Reference Link</label>
                                                 <div class="Smt-1">
-                                                    <input type="url" name="download_btn_ref" id="download_btn_ref" value="{{ old('download_btn_ref', $webpage->download_btn_ref) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Enter text for Hero Section slide 1 ...">
+                                                    <input type="text" name="download_btn_ref" id="download_btn_ref" value="{{ old('download_btn_ref', $webpage->download_btn_ref) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Enter text for Hero Section slide 1 ...">
                                                     <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('download_btn_ref') }}</div>
+                                                </div>
+
+                                                <label for="enquiry_btn_ref" class="block text-sm font-medium text-gray-700">Enquiry Button Reference Link</label>
+                                                <div class="Smt-1">
+                                                    <input type="text" name="enquiry_btn_ref" id="enquiry_btn_ref" value="{{ old('enquiry_btn_ref', $webpage->enquiry_btn_ref) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Enter text for Hero Section slide 1 ...">
+                                                    <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('enquiry_btn_ref') }}</div>
+                                                </div>
+
+                                                <label for="discover_btn_ref" class="block text-sm font-medium text-gray-700">Discover Button Reference Link</label>
+                                                <div class="Smt-1">
+                                                    <input type="text" name="discover_btn_ref" id="discover_btn_ref" value="{{ old('discover_btn_ref', $webpage->discover_btn_ref) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Enter text for Hero Section slide 1 ...">
+                                                    <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('discover_btn_ref') }}</div>
                                                 </div>
                                             </div>
 

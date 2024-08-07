@@ -107,9 +107,12 @@ class WebpageController extends Controller
                     'slide2_sub' => $request->hero_slide2_text,
                     'slide3_header' => $request->hero_slide3_title,
                     'slide3_sub' => $request->hero_slide3_text,
+                    'download_btn_ref' => $request->download_btn_ref,
+                    'enquiry_btn_ref' => $request->enquiry_btn_ref,
+                    'discover_btn_ref' => $request->discover_btn_ref, 
 
 
-                    /* WHAT WE ADDED START */
+                    /* WHAT WE ADDED END */
 
                     'industries' => [
                         $request->ind_section_header,

@@ -10,7 +10,7 @@ class Webpage extends Model
     use HasFactory;
     protected $fillable = [
         'title', 'color', 'color2', 'description', 'slides', 'features', 'industries', 'services_header', 'services', 
-        'faqs', 'slide1_header', 'slide1_sub', 'slide2_header', 'slide2_sub', 'slide3_header', 'slide3_sub', 'download_btn_ref', 'about_page_header', 'about_page_header_desc', 'about_us_title1', 'about_us_desc1', 'about_us_title2',
+        'faqs', 'slide1_header', 'slide1_sub', 'slide2_header', 'slide2_sub', 'slide3_header', 'slide3_sub', 'download_btn_ref', 'enquiry_btn_ref', 'discover_btn_ref', 'about_page_header', 'about_page_header_desc', 'about_us_title1', 'about_us_desc1', 'about_us_title2',
         'about_us_desc2', 'about_value_title1', 'about_value_desc1', 'about_value_title2', 'about_value_desc2',
         'about_value_title3', 'about_value_desc3', 'about_mission_statement', 'about_mission_desc', 
         'contact_page_header', 'contact_office', 'contact_office_hours', 'contact_front_desk_phone',
