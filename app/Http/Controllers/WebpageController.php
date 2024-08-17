@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreWebpageRequest;
 use App\Http\Requests\UpdateWebpageRequest;
-use App\Traits\StoreImageTrait;
+use App\Traits\StoreHeroImageTrait;
 use App\Models\Webpage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 class WebpageController extends Controller
 {
 
-    use StoreImageTrait;
+    use StoreHeroImageTrait;
     
     /**
      * Display a listing of the resource.
@@ -44,7 +44,13 @@ class WebpageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $webpage_id = 1;
+        $uploaded_images = $this->verifyAndStoreHeroImage($request, 'slides', $webpage_id);
+
+        return $uploaded_images;
+
+        
     }
 
     /**
@@ -96,6 +102,9 @@ class WebpageController extends Controller
         if ($request->validated()){
             if ($webpage_id == 1) {
 
+                $uploaded_images = $this->verifyAndStoreHeroImage($request);
+                
+
                 $webpage->update([
                     'color' => $request->color,
                     'color2' => $request->color2,
@@ -110,6 +119,7 @@ class WebpageController extends Controller
                     'download_btn_ref' => $request->download_btn_ref,
                     'enquiry_btn_ref' => $request->enquiry_btn_ref,
                     'discover_btn_ref' => $request->discover_btn_ref, 
+                    'slides' => $uploaded_images,
 
 
                     /* WHAT WE ADDED END */

@@ -5,7 +5,9 @@
 @endsection
 
 @section('page-content')
-    <?php $page = $pageTitle;?>
+    <?php $page = $pageTitle;
+        $slides = $webpage->slides;
+        ?>
 
     <!--Main Slider Start-->
     <section class="main-slider main-slider-style1">
@@ -33,7 +35,7 @@
 
                 <!--Start Single Swiper Slide-->
                 <div class="swiper-slide">
-                    <div class="image-layer" style="background-image: url(/images/slides/slide-v1-1.jpg);">
+                    <div class="image-layer" style="background-image: url('{{$webpage->slides[0]}}');">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -65,7 +67,7 @@
 
                 <!--Start Single Swiper Slide-->
                 <div class="swiper-slide">
-                    <div class="image-layer" style="background-image: url(/images/slides/slide-v1-2.jpg);">
+                    <div class="image-layer" style="background-image: url('{{$webpage->slides[1]}}');">
                     </div>
                     <div class="container">
                         <div class="row">

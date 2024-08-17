@@ -38,10 +38,10 @@ trait StoreImageTrait
 
             $fileModal->save();
 
-            return back()->with('success', 'File has successfully uploaded!');
+            return $imgData;
         }
 
-        return $product_id;
+        return [];
 
     }
 }

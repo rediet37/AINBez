@@ -35,7 +35,7 @@
                                 
                                     @if(is_array($slider_images) && !empty($slider_images))
                                         @foreach ($slider_images as $index => $image)
-                                            <img class="h-full w-full object-cover" src="{{ asset('/images/slides/'.$image) }}" alt="Project Picture">
+                                            <img class="h-1/3 w-full object-cover" src="{{ asset($image) }}" alt="Project Picture">
                                         @endforeach
                                     @endif
                                 </div>

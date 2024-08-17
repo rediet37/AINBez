@@ -18,7 +18,7 @@
                 <div>
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="mt-5 md:mt-0 md:col-span-6">
-                            <form method="post" action="{{ route('post_webpages.update', $webpage->id) }}">
+                            <form method="post" enctype="multipart/form-data" action="{{ route('post_webpages.update', $webpage->id) }}">
                                 @csrf
                                 @method('PUT')
                                 
@@ -142,6 +142,27 @@
                                                     <input type="text" name="discover_btn_ref" id="discover_btn_ref" value="{{ old('discover_btn_ref', $webpage->discover_btn_ref) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Enter text for Hero Section slide 1 ...">
                                                     <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('discover_btn_ref') }}</div>
                                                 </div>
+                                                
+                                                {{-- IMAGE PART WE ADDED START --}}
+                                                <label for="slides" class="block text-sm font-medium text-gray-700">Hero Slide 1 Image</label>
+                                                <div class="Smt-1">
+                                                    <input type="file" name="slides[]" id="hero_slide1_image" value="{{ old('hero_slide1_image', $webpage->hero_slide1_image) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Upload image for Hero Section slide 1 ...">
+                                                    <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('hero_slide1_image') }}</div>
+                                                </div>
+
+                                                <label for="slides" class="block text-sm font-medium text-gray-700">Hero Slide 2 Image</label>
+                                                <div class="Smt-1">
+                                                    <input type="file" name="slides[]" id="hero_slide2_image" value="{{ old('hero_slide2_image', $webpage->hero_slide2_image) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Upload image for Hero Section slide 2 ...">
+                                                    <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('hero_slide2_image') }}</div>
+                                                </div>
+
+                                                <label for="slides" class="block text-sm font-medium text-gray-700">Hero Slide 3 Image</label>
+                                                <div class="Smt-1">
+                                                    <input type="file" name="slides[]" id="hero_slide3_image" value="{{ old('hero_slide3_image', $webpage->hero_slide3_image) }}" autocomplete="color2" class="mt-1 focus:ring-red-600 focus:border-red-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('color2') border-red-500 @enderror" placeholder="Upload image for Hero Section slide 3 ...">
+                                                    <div class="mt-1 text-sm text-red-600 alert-description text-danger">{{ $errors->first('hero_slide3_image') }}</div>
+                                                </div>
+
+                                                {{-- IMAGE PART WE ADDED END --}}
                                             </div>
 
                                             <hr>
