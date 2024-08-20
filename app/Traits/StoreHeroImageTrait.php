@@ -25,12 +25,12 @@ trait StoreHeroImageTrait
             foreach($request->file($fieldName) as $key => $file) {
                 if ($file) {
                     $name = $file->getClientOriginalName();
-                    $mainPathName = '/images/slides/';
-                    $filePath = $mainPathName . 'slide-' . ($key + 1) . '/' . $name;
+                    $mainPathName = 'images/slides/';
+                    //$filePath = $mainPathName . 'slide-' . ($key + 1) . '/' . $name;
 
-                    $file->move(public_path() . $mainPathName . 'slide-' . ($key + 1), $name);
+                    $file->move(public_path($mainPathName), $name);
 
-                    $existingSlides[$key] = $filePath;
+                    $existingSlides[$key] = $name;
                 }
             }
 

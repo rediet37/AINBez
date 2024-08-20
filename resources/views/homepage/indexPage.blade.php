@@ -35,7 +35,7 @@
 
                 <!--Start Single Swiper Slide-->
                 <div class="swiper-slide">
-                    <div class="image-layer" style="background-image: url('{{$webpage->slides[0]}}');">
+                    <div class="image-layer" style="background-image: url('/images/slides/{{$webpage->slides[0]}}');">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -67,7 +67,7 @@
 
                 <!--Start Single Swiper Slide-->
                 <div class="swiper-slide">
-                    <div class="image-layer" style="background-image: url('{{$webpage->slides[1]}}');">
+                    <div class="image-layer" style="background-image: url('/images/slides/{{$webpage->slides[1]}}')">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -99,7 +99,7 @@
 
                 <!--Start Single Swiper Slide-->
                 <div class="swiper-slide">
-                    <div class="image-layer" style="background-image: url(/images/slides/slide-v1-3.jpg);">
+                    <div class="image-layer" style="background-image: url('/images/slides/{{$webpage->slides[2]}}')">
                     </div>
                     <div class="container">
                         <div class="row">
