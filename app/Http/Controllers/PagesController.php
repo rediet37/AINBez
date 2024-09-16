@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Webpage;
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\Product;
 
 class PagesController extends Controller
 {
