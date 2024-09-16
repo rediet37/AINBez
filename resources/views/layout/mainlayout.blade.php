@@ -207,7 +207,7 @@
                                             </li>
 
                                             <li class="">
-                                                <a href="#">News</a>
+                                                <a href="{{route('ain.news_list')}}">News</a>
                                             </li>
                                             <li class="">
                                                 <a href="{{route('ain.about')}}">About Us</a>

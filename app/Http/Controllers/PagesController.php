@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Webpage;
 use Illuminate\Http\Request;
+use App\Models\News;
 
 class PagesController extends Controller
 {
@@ -51,12 +52,12 @@ class PagesController extends Controller
     public function openAINAllNews()
     {
         $pageData = array (
-            'pageTitle' => 'Habar Architects — News'
+            'pageTitle' => 'AIN Business Group — News'
         );
         
-        $newses = News::where('isActive', 1)->latest()->get();
+        $news = News::latest()->get();
         
-        return view('homepage.news_list', compact('newses'))->with($pageData);
+        return view('homepage.news_list', compact('news'))->with($pageData);
     }
     public function openAINNews($id)
     {
