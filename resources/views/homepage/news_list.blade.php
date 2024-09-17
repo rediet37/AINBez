@@ -1,29 +1,73 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-    
-    <div class="grid justify-center grid-cols-1 gap-8 mx-24 md:grid-cols-3">
+  <body>
+    <div class="max-w-7xl mx-auto px-4 py-8">
         @foreach($news as $singleNews)
-        <div class="flex flex-col items-center mt-2 border">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 @if($singleNews->cover_image_path)
-                <img class = "mb-4 w-68 rounded-start" src="{{asset('images/blog/' . $singleNews->cover_image_path) }}" alt="{{ $singleNews->title }} cover image">
+                <img class = "w-full h-64 object-cover" src="{{asset('images/blog/' . $singleNews->cover_image_path) }}" alt="{{ $singleNews->title }} cover image">
                 @else
-                <img class = "mb-4 w-68 rounded-start" src="{{asset('images/blog/blog-v1-1.jpg') }}" alt="Default image">
+                <img class = "w-full h-64 object-cover" src="{{asset('images/blog/blog-v1-1.jpg') }}" alt="Default image">
                 @endif
             
-                <h2 class="pb-1 text-3xl font-bold uppercase text-teal-950">{{ $singleNews->title }}</h2>
+                <div class="p-6">
+                <a href="{{route('ain.news', ['id' => $singleNews->id])}}">
+                <h1 class="text-3xl font-bold mb-4 text-gray-800">{{ $singleNews->title }}</h1>
+                </a>
                 <hr/>
 
-                {{-- Use the website's font for this --}}
+                {{-- Author and date --}}
+                {{-- Maybe add author/profile and date icons --}}
 
-                <p class="px-3 pt-2 pb-4 text-sm">{{ $singleNews->summary }}</p>
-                <div class="flex justify-between w-full px-4 pb-3">
-                        {{-- news tags as a component (look in witsrasra) --}}
-                        
+                <div class="flex items-center space-x-4 text-gray-500 mb-4">
+                    <span class="font-medium">{{$singleNews->author->name}}</span>
+                    <span>•</span>
+                    <span>{{$singleNews->created_at->diffForHumans()}}</span>
                 </div>
-                {{-- hr tag is not displaying for some reason --}}
-                <hr class="border-t-2 border-black"/>
+
+                {{-- Summary --}}
+            
+                    <p class="text-gray-700 mb-6">{{ $singleNews->summary }}</p>
+
+                {{-- Tags --}}
+                <div class="flex flex-wrap items-center gap-2 mb-6">
+                    @if(!empty($singleNews->tags))
+                        @php
+                            $tags = $singleNews->tags;
+                        @endphp
+                        @foreach ($tags as $tag)
+                            <span class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm"><a href="/?tag={{$tag}}">{{$tag}}</a></span>                   
+                        @endforeach
+                    @endif      
+                </div>
+
+                {{-- View count and share --}}
+                <div class="flex items-center justify-between">
+                    {{-- View count --}}
+                    <div class="flex items-center text-gray-500 space-x-2">
+                        <i class="fas fa-eye h-5 w-5 text-gray-400"></i>
+                        <span>{{$singleNews->views_count}}</span>
+                    </div>
+
+                    {{-- Share --}}
+                    {{-- Options to share?? --}}
+
+                </div>
+
+                <div>
+                    <p>{{$singleNews->author->name}}</p>
+                    <p>{{$singleNews->created_at->diffForHumans()}}</p>
+                </div>
+                
+            </div>
                 
                 
             </div>
         @endforeach
     </div>
-
+</body>
