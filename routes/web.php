@@ -36,3 +36,8 @@ Route::middleware([
     
     
 });
+
+Route::get('/download-test-pdf', function(){
+    $filepath = public_path('test.pdf');
+    return response()->download($filepath);
+});

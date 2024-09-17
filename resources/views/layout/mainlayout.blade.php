@@ -230,9 +230,10 @@
                                                 <span class="icon-home-button"></span>Login
                                             </a>
 
-                                            <a class="style2" href="#">
+                                            <a class="style2" href="{{url('/download-test-pdf')}}">
                                                 <span class="icon-payment"></span>Request Quote
                                             </a>
+
                                         @endauth
                                     </div>
                                 </div>
