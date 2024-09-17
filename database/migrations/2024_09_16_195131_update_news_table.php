@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text('content');
             $table->string('cover_image_path')->nullable();
             $table->text('summary')->nullable();
-            $table->integer('author_id');
+            $table->unsignedBigInteger('author_id');
             $table->json('tags')->nullable();
             $table->unsignedInteger('views_count')->default(0);
 
