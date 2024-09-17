@@ -1,0 +1,1 @@
+{{-- Page to view the individual news --}}

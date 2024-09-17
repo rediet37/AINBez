@@ -56,7 +56,7 @@ class PagesController extends Controller
             'pageTitle' => 'AIN Business Group — News'
         );
         
-        $news = News::latest()->get();
+        $news = News::with('author')->latest()->get();
         
         return view('homepage.news_list', compact('news'))->with($pageData);
     }
