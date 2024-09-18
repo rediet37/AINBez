@@ -62,7 +62,7 @@ class PagesController extends Controller
     }
     public function openAINNews($id)
     {
-        $news = News::findOrFail($id);
+        $news = News::with('author')->findOrFail($id);
         // $images = Image::findOrFail($id);
 
         // $images_array = json_decode($images->news_pictures);
